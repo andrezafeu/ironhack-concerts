@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  get '/', to: 'site#home'
+  get '/', to: 'site#home', as: :home
   resources :concerts, only: [:show, :new, :create]
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

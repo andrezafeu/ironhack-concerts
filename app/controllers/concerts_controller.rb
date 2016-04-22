@@ -15,4 +15,10 @@ class ConcertsController < ApplicationController
 		@my_concert.save
 		redirect_to "/concerts/#{@my_concert.id}"
 	end
+	def show
+		@my_concert = Concert.find_by(id:params[:id])
+		unless @my_concert
+			render "no_concerts_found"
+		end
+	end
 end
