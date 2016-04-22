@@ -17,12 +17,3 @@ class CommentsController < ApplicationController
 		end
 	end
 end
-
-	# def create
-	# @my_comment = Comment.new()
-	# if @my_comment.save
-	# 	redirect_to action: "index", controller: "comments", 
-	# 	product_id: @my_comment.id
-	# else
-	# 	render "new"
-	# end
