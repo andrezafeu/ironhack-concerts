@@ -2,7 +2,7 @@
 
 <ul>
 	<% @concerts.each do |concert| %>
-		<% if concert.date.month == Date.today.month %>
+		<% if concert.date.month == Date.today.month && concert.date.future?%>
 			<li>
 				<b><%= link_to concert.artist, "/concerts/#{concert.id}" %></b>
 				<% if (concert.description) %>
