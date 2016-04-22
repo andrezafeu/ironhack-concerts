@@ -9,9 +9,11 @@
 			<% end %>
 			<%= concert.description %>
 			<%= concert.date %>
-			
+
 		</li>
 	<% end %>
 </ul>
+
+<%= link_to "Create a new concert", new_concert_path %>
 
 <%= render "shared/footer" %>
