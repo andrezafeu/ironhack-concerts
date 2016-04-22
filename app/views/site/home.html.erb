@@ -16,6 +16,14 @@
 	<% end %>
 </ul>
 
+<h4>How much would you like to spend?</h4>
+
+<%= form_tag('/search') do %>
+	<%=label_tag 'Cost'%>
+	<%=number_field_tag 'cost'%>
+  <div><%= submit_tag 'Search' %></div>
+<% end -%>
+
 <%= render "shared/sidebar" %>
 
 <%= render "shared/footer" %>
