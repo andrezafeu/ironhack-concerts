@@ -16,5 +16,24 @@
 	<% end %>
 </ul>
 
+<%= render "shared/sidebar" %>
 
 <%= render "shared/footer" %>
+
+<!-- datetime.to_date.past? # => false (only based on date)
+datetime.to_date.future? # => false  (only based on date)
+
+datetime.to_date == Date.tomorrow # => false
+datetime.to_date == Date.yesterday # => false
+
+datetime = Time.now.to_datetime
+=> Sun, 26 Oct 2014 16:24:55 -0600 
+
+datetime += 1.day
+=> Mon, 27 Oct 2014 16:25:12 -0600
+
+datetime >= Date.today
+=> true
+
+datetime < (Date.tomorrow + 1.day)
+=> false -->

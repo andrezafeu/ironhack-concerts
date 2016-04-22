@@ -1,0 +1,15 @@
+<h3>Later this month!</h3>
+
+<ul>
+	<% @concerts.each do |concert| %>
+		<% if concert.date.month == Date.today.month %>
+			<li>
+				<b><%= link_to concert.artist, "/concerts/#{concert.id}" %></b>
+				<% if (concert.description) %>
+					-
+				<% end %>
+				<%= concert.description %>
+			</li>
+		<% end %>
+	<% end %>
+</ul>
