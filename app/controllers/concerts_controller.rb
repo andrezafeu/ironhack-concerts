@@ -1,4 +1,8 @@
 class ConcertsController < ApplicationController
+	def index
+		@concerts = Concert.order(date: :desc).limit(10)
+		render 'index'
+	end
 	def new
 		@my_concert = Concert.new
 		render "new"

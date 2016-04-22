@@ -1,0 +1,17 @@
+<%= render "shared/header" %>
+
+<ul>
+	<% @concerts.each do |concert| %>
+		<li>
+			<b><%= link_to concert.artist, "/concerts/#{concert.id}" %></b>
+			<% if (concert.description) %>
+				-
+			<% end %>
+			<%= concert.description %>
+			<%= concert.date %>
+			
+		</li>
+	<% end %>
+</ul>
+
+<%= render "shared/footer" %>

@@ -1,5 +1,20 @@
 <%= render "shared/header" %>
 
-<h1>Main Page</h1>
+<h1>Happening today!</h1>
 
-<%= render "shared/footers" %>
+<ul>
+	<% @concerts.each do |concert| %>
+		<% if concert.date.today? %>
+			<li>
+				<b><%= link_to concert.artist, "/concerts/#{concert.id}" %></b>
+				<% if (concert.description) %>
+					-
+				<% end %>
+				<%= concert.description %>
+			</li>
+		<% end %>
+	<% end %>
+</ul>
+
+
+<%= render "shared/footer" %>
