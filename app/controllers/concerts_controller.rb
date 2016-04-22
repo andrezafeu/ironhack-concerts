@@ -12,8 +12,11 @@ class ConcertsController < ApplicationController
 			:price => params[:concert][:price],
 			:description => params[:concert][:description]
 			)
-		@my_concert.save
-		redirect_to "/concerts/#{@my_concert.id}"
+		if @my_concert.save
+			redirect_to "/concerts/#{@my_concert.id}"
+		else
+			render "new"
+		end
 	end
 	def show
 		@my_concert = Concert.find_by(id:params[:id])
