@@ -1,3 +1,5 @@
+<%= render "shared/header" %>
+
 <h1>Add a new concert</h1>
 
 <% if @my_concert.errors.any? %>
@@ -31,3 +33,5 @@
 	<%= f.text_area :description %>
 	<%= f.button %>
 <% end %>
+
+<%= render "shared/footer" %>
