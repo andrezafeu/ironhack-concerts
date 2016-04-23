@@ -30,4 +30,9 @@ class ConcertsController < ApplicationController
 			render "no_concerts_found"
 		end
 	end
+	def popular
+		# FIX THIS
+		@concerts = Concert.order(Concert.comments.count: :desc).limit(10)
+		render "index"
+	end
 end

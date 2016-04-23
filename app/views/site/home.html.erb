@@ -22,6 +22,11 @@
   <div><%= submit_tag 'Search' %></div>
 <% end -%>
 
+<%= form_tag('concerts/popular') do %>
+	<%=label_tag 'Popular'%>
+  <div><%= submit_tag 'See Popular Concerts!' %></div>
+<% end -%>
+
 <%= render "shared/sidebar" %>
 
 <!-- datetime.to_date.past? # => false (only based on date)
