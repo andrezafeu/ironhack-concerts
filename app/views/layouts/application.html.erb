@@ -8,14 +8,15 @@
 </head>
 <body>
 
-<header>
-	<b><%= link_to "Home", home_path %>
-	<b><%= link_to "Concerts", concerts_path %>
-</header>
+	<header>
+		<b><%= link_to "Home", home_path %>
+		<b><%= link_to "Concerts", concerts_path %>
+	</header>
 
-<%= yield %>
-<footer>
-	© 2016 Andreza Feu
-</footer>
+	<%= yield %>	
+	
+	<footer>
+		© 2016 Andreza Feu
+	</footer>
 </body>
 </html>

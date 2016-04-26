@@ -8,7 +8,10 @@ concert7 = Concert.create(artist: "Cheap Artist", venue: "Cheap Place", city: "C
 concert8 = Concert.create(artist: "Popular Artist", venue: "Popular Place", city: "Popular City", date: "2016/4/27 22:00", price: "8")
 concert9 = Concert.create(artist: "Almost popular Artist", venue: "Place", city: "City", date: "2016/4/28 22:00", price: "8")
 concert10 = Concert.create(artist: "Not popular Artist", venue: "Place", city: "City", date: "2016/4/28 22:00", price: "10")
-
+concert11 = Concert.create(artist: "Artist 11", venue: "Venue 11", city: "City 11", date: "2016/4/25 22:30", price: "35")
+concert12 = Concert.create(artist: "Artist 12", venue: "Venue 12", city: "City 12", date: "2016/4/26 22:30", price: "35")
+concert13 = Concert.create(artist: "Artist 13", venue: "Venue 13", city: "City 13", date: "2016/4/27 22:30", price: "35")
+concert14 = Concert.create(artist: "Artist 14", venue: "Venue 14", city: "City 14", date: "2016/5/1 22:30", price: "35")
 
 comment1 = Comment.create(name: "User 1", comment: "Comment 1", concert_id: "8")
 comment2 = Comment.create(name: "User 2", comment: "Comment 2", concert_id: "8")

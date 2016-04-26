@@ -31,8 +31,12 @@ class ConcertsController < ApplicationController
 		end
 	end
 	def popular
-		# FIX THIS
-		@concerts = Concert.order(Concert.comments.count: :desc).limit(10)
+		@concerts = Concert.all
+		@concerts = @concerts.sort_by do |concert|
+			concert.comments.count
+		end
+		#FIX THIS
+		@concerts = @concerts.last(10)
 		render "index"
 	end
 end

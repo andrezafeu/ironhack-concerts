@@ -1,34 +1,37 @@
-<h1>Happening today!</h1>
+<div class = "main-page">
+<div class = "main-content">
+	<h1>Happening today!</h1>
 
-<ul>
-	<% @concerts.each do |concert| %>
-		<% if concert.date.today? %>
-			<li>
-				<b><%= link_to concert.artist, "/concerts/#{concert.id}" %></b>
-				<% if (concert.description) %>
-					-
-				<% end %>
-				<%= concert.description %>
-			</li>
+	<ul>
+		<% @concerts.each do |concert| %>
+			<% if concert.date.today? %>
+				<li>
+					<b><%= link_to concert.artist, "/concerts/#{concert.id}" %></b>
+					<% if (concert.description) %>
+						-
+					<% end %>
+					<%= concert.description %>
+				</li>
+			<% end %>
 		<% end %>
-	<% end %>
-</ul>
+	</ul>
 
-<h4>How much would you like to spend?</h4>
+	<h4>How much would you like to spend?</h4>
 
-<%= form_tag('/search') do %>
-	<%=label_tag 'Cost'%>
-	<%=number_field_tag 'cost'%>
-  <div><%= submit_tag 'Search' %></div>
-<% end -%>
+	<%= form_tag('/search') do %>
+		<%=label_tag 'Cost'%>
+		<%=number_field_tag 'cost'%>
+	  <div><%= submit_tag 'Search' %></div>
+	<% end -%>
 
-<%= form_tag('concerts/popular') do %>
-	<%=label_tag 'Popular'%>
-  <div><%= submit_tag 'See Popular Concerts!' %></div>
-<% end -%>
+	<%= form_tag('concerts/popular') do %>
+		<%=label_tag 'Popular'%>
+	  <div><%= submit_tag 'See Popular Concerts!' %></div>
+	<% end -%>
 
-<%= render "shared/sidebar" %>
-
+	<%= render "shared/sidebar" %>
+</div>
+<div class ="overlay"></div>
 <!-- datetime.to_date.past? # => false (only based on date)
 datetime.to_date.future? # => false  (only based on date)
 
